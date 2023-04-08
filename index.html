@@ -3,6 +3,7 @@
   <head>
     <title>Three.js Example</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
   </head>
   <body>
     <script>
@@ -13,20 +14,19 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
 
-      // Create a cube and add it to the scene
-      const geometry = new THREE.BoxGeometry();
-      const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-      const cube = new THREE.Mesh(geometry, material);
-      scene.add(cube);
+      // Load the 3D model
+      const loader = new THREE.GLTFLoader();
+      loader.load('scene.gltf', function (gltf) {
+        // Add the model to the scene
+        scene.add(gltf.scene);
+      });
 
-      // Move the camera back so we can see the cube
+      // Move the camera back so we can see the model
       camera.position.z = 5;
 
       // Render the scene
       function animate() {
         requestAnimationFrame(animate);
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
         renderer.render(scene, camera);
       }
       animate();
