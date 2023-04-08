@@ -14,6 +14,7 @@
 <body>
   <script src="https://cdn.jsdelivr.net/npm/three@0.135.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.135.0/examples/js/loaders/FBXLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fflate@1.3.3/dist/fflate.min.js"></script>
   <script>
     // Create the scene, camera, and renderer
     const scene = new THREE.Scene();
@@ -30,7 +31,8 @@
 
     // Load the FBX file and add it to the scene
     const loader = new THREE.FBXLoader();
-    loader.load('scene.fbx', function (object) {
+    loader.setPath('/');
+    loader.load('model.fbx', function (object) {
       scene.add(object);
     });
 
