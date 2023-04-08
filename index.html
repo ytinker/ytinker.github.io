@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Three.js Example</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+    <title>Three.js FBX Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.135.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.135.0/examples/js/loaders/FBXLoader.js"></script>
     <script>
-      console.log('Loading Three.js and GLTFLoader...');
-      
-      // Initialize Three.js
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
       const renderer = new THREE.WebGLRenderer();
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
 
-      // Load the 3D model
-      const loader = new THREE.GLTFLoader();
-      loader.load('scene.gltf', function (gltf) {
-        // Add the model to the scene
-        scene.add(gltf.scene);
-      }, undefined, function(error) {
-        console.error(error);
+      const loader = new THREE.FBXLoader();
+      loader.load('scene.fbx', function (object) {
+        scene.add(object);
       });
 
-      // Move the camera back so we can see the model
       camera.position.z = 5;
 
-      // Render the scene
       function animate() {
         requestAnimationFrame(animate);
         renderer.render(scene, camera);
       }
+
       animate();
     </script>
   </body>
 </html>
-
