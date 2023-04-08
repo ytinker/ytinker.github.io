@@ -18,7 +18,7 @@
       const loader = new THREE.GLTFLoader();
       loader.load('/hatsune/scene.gltf', function (gltf) {
         // Add the model to the scene
-        scene.add('/hatsune/gltf.scene');
+        scene.add(gltf.scene);
       });
 
       // Move the camera back so we can see the model
