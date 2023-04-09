@@ -15,7 +15,7 @@ loader.load( '/model.glb', function ( gltf ) {
 	scene.add( gltf.scene );
     // Set the model's position and scale
     gltf.scene.position.set(0, 0, 0);
-    gltf.scene.scale.set(1, 1, 1);
+    gltf.scene.scale.set(100, 100, 100);
     gltf.scene.traverse( function( node ) { if ( node.isMesh ) node.material = new THREE.MeshStandardMaterial(); } );
 
 }, function ( xhr ) {
@@ -39,6 +39,8 @@ camera.position.z = 5;
 function animate() {
   requestAnimationFrame(animate);
   renderer.gammaFactor=2.2;
+  cube.rotation.x += 0.002;
+  cube.rotation.y += 0.002;
   renderer.render(scene, camera);
 }
 
