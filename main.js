@@ -23,6 +23,8 @@ function ( error ) {
 
 // Set the camera position
 camera.position.set(0, 1, 4);
+const ambientLight = new THREE.AmbientLight( 0xffffff, 0.5 ); // color, intensity
+scene.add( ambientLight );
 
     // Animate the scene
     function animate() {
