@@ -26,12 +26,14 @@ function ( error ) {
 } );
 
 // Set the camera position
-camera.position.set(0, 10, 4);
-const ambientLight = new THREE.AmbientLight( 0xffffff, 0.5 ); // color, intensity
+const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+const cube = new THREE.Mesh( geometry, material );
+scene.add( cube );
 
-camera.position.z = 20;
+camera.position.z = 5;
 
-scene.add( ambientLight );
+
 
     // Animate the scene
 function animate() {
