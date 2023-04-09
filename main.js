@@ -11,13 +11,14 @@ document.body.appendChild( renderer.domElement );
 // Load the GLB file and add it to the scene
 const loader = new GLTFLoader();
 loader.load( 'miku_hatsune_rig.glb', function ( gltf ) {
-
+	console.log('GLB file loaded successfully.');
 	scene.add( gltf.scene );
 
-}, undefined, function ( error ) {
-  
+}, function ( xhr ) {
+	console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+}, 
+function ( error ) {
 	console.error( error );
-
 } );
 
 // Set the camera position
