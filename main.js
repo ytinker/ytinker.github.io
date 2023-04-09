@@ -19,5 +19,3 @@ loader.load( 'miku_hatsune_rig.glb', function ( gltf ) {
 	console.error( error );
 
 } );
-
-animate();
