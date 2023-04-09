@@ -27,7 +27,7 @@ function ( error ) {
 
 // Set the camera position
 const geometry = new THREE.BoxGeometry( 2, 2, 2 );
-const material = new THREE.MeshBasicMaterial( { color: 0x777777 } );
+const material = new THREE.MeshBasicMaterial( { color: 0x0000ff } );
 const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 
