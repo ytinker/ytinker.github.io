@@ -15,7 +15,7 @@ loader.load( 'model.glb', function ( gltf ) {
 	scene.add( gltf.scene );
     // Set the model's position and scale
     gltf.scene.position.set(0, 0, 0);
-    gltf.scene.scale.set(1, 1, 1);
+    gltf.scene.scale.set(100, 100, 100);
 
 }, function ( xhr ) {
 	console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
@@ -25,7 +25,7 @@ function ( error ) {
 } );
 
 // Set the camera position
-camera.position.set(0, 1, 4);
+camera.position.set(0, 10, 4);
 const ambientLight = new THREE.AmbientLight( 0xffffff, 0.5 ); // color, intensity
 
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
