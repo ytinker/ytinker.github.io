@@ -10,7 +10,7 @@ document.body.appendChild( renderer.domElement );
 
 const loader = new GLTFLoader();
 
-loader.load( 'miku_hatsune.glb', function ( gltf ) {
+loader.load( 'miku_hatsune_rig.glb', function ( gltf ) {
 
 	scene.add( gltf.scene );
 
