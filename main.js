@@ -15,7 +15,8 @@ loader.load( 'model.glb', function ( gltf ) {
 	scene.add( gltf.scene );
     // Set the model's position and scale
     gltf.scene.position.set(0, 0, 0);
-    gltf.scene.scale.set(100, 100, 100);
+    gltf.scene.scale.set(10, 10, 10);
+    gltf.scene.traverse( function( node ) { if ( node.isMesh ) node.material = new THREE.MeshStandardMaterial(); } );
 
 }, function ( xhr ) {
 	console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
@@ -28,18 +29,14 @@ function ( error ) {
 camera.position.set(0, 10, 4);
 const ambientLight = new THREE.AmbientLight( 0xffffff, 0.5 ); // color, intensity
 
-const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-const cube = new THREE.Mesh( geometry, material );
-//scene.add( cube );
-
-camera.position.z = 5;
+camera.position.z = 20;
 
 scene.add( ambientLight );
 
     // Animate the scene
 function animate() {
   requestAnimationFrame(animate);
+  renderer.gammaFactor=2.2;
   renderer.render(scene, camera);
 }
 
