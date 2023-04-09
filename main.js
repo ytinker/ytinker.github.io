@@ -12,8 +12,10 @@ document.body.appendChild( renderer.domElement );
 const loader = new GLTFLoader();
 loader.load( 'model.glb', function ( gltf ) {
 	console.log('GLB file loaded successfully.');
-  gltf.scene.scale.set(10, 10, 10)
 	scene.add( gltf.scene );
+    // Set the model's position and scale
+    gltf.scene.position.set(0, 0, 0);
+    gltf.scene.scale.set(1, 1, 1);
 
 }, function ( xhr ) {
 	console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
@@ -29,7 +31,7 @@ const ambientLight = new THREE.AmbientLight( 0xffffff, 0.5 ); // color, intensit
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 const cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
+//scene.add( cube );
 
 camera.position.z = 5;
 
