@@ -1,5 +1,4 @@
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-const loader = new GLTFLoader();
 
     // Create the scene, camera, and renderer
 const scene = new Scene();
