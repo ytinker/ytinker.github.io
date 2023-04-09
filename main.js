@@ -15,7 +15,7 @@ loader.load( '/model.glb', function ( gltf ) {
 	scene.add( gltf.scene );
     // Set the model's position and scale
     gltf.scene.position.set(0, 0, 0);
-    gltf.scene.scale.set(1, 1, 1);
+    gltf.scene.scale.set(20, 20, 20);
     gltf.scene.traverse( function( node ) { if ( node.isMesh ) node.material = new THREE.MeshStandardMaterial(); } );
 
 }, function ( xhr ) {
