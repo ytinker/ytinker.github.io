@@ -24,9 +24,8 @@ loader.load( 'miku_hatsune_rig.glb', function ( gltf ) {
 
 } );
 
-
-    // Set the camera position
-    camera.position.set(0, 1, 4);
+// Set the camera position
+camera.position.set(0, 1, 4);
 
     // Animate the scene
     function animate() {
