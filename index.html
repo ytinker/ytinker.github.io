@@ -1,35 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Three.js Example</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
-  </head>
-  <body>
-    <script>
-      // Initialize Three.js
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-      const renderer = new THREE.WebGLRenderer();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      document.body.appendChild(renderer.domElement);
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>My first three.js app</title>
+      <style>
+        body { margin: 0; }
+      </style>
+      <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
 
-      // Load the 3D model
-      const loader = new THREE.GLTFLoader();
-      loader.load('miku_hatsune_rig.glb', function (gltf) {
-        // Add the model to the scene
-        scene.add(gltf.scene);
-      });
-
-      // Move the camera back so we can see the model
-      camera.position.z = 5;
-
-      // Render the scene
-      function animate() {
-        requestAnimationFrame(animate);
-        renderer.render(scene, camera);
-      }
-      animate();
-    </script>
-  </body>
-</html>
+      <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.151.3/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@<version>/examples/jsm/"
+          }
+        }
+      </script>
+    </head>
+    <body>
+      <script type="module" src="/main.js"></script>
+    </body>
+  </html>
