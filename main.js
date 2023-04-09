@@ -10,8 +10,9 @@ document.body.appendChild( renderer.domElement );
 
 // Load the GLB file and add it to the scene
 const loader = new GLTFLoader();
-loader.load( 'miku_hatsune_rig.glb', function ( gltf ) {
+loader.load( 'model.glb', function ( gltf ) {
 	console.log('GLB file loaded successfully.');
+  gltf.scene.scale.set(10, 10, 10)
 	scene.add( gltf.scene );
 
 }, function ( xhr ) {
