@@ -8,12 +8,6 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
-// Add some lights to the scene
-const ambientLight = new ambientLight(0xffffff, 0.3);
-const directionalLight = new directionalLight(0xffffff, 0.5);
-directionalLight.position.set(-1, 2, 4);
-scene.add(ambientLight, directionalLight);
-
 // Load the GLB file and add it to the scene
 const loader = new GLTFLoader();
 loader.load( 'miku_hatsune_rig.glb', function ( gltf ) {
