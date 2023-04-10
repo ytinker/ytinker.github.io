@@ -21,8 +21,6 @@ const cube = new THREE.Mesh( geometry, material );
 camera.position.z = 10;
 camera.position.y =0;
 
-const light = new THREE.AmbientLight( 0x404040 ); // soft white light
-scene.add( light );
 
 // Load the GLB file and add it to the scene
 const loader = new GLTFLoader();
@@ -41,6 +39,8 @@ function ( error ) {
 	console.error( error );
 } );
 
+const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+scene.add( light );
 
     // Animate the scene
 function animate() {
