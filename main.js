@@ -11,11 +11,11 @@ document.body.appendChild( renderer.domElement );
 
 // Load the GLB file and add it to the scene
 const loader = new GLTFLoader();
-loader.load( '/model.glb', function ( gltf ) {
+loader.load( 'model.glb', function ( gltf ) {
 	console.log('GLB file loaded successfully.');
 	scene.add( gltf.scene );
     // Set the model's position and scale
-    gltf.scene.position.set(0, 0, 0);
+    gltf.scene.position.set(0, -5, 0);
     gltf.scene.scale.set(2, 2, 2);
     gltf.scene.traverse( function( node ) { if ( node.isMesh ) node.material = new THREE.MeshStandardMaterial(); } );
 
@@ -31,7 +31,7 @@ renderer.gammaFactor=2.2;
 const geometry = new THREE.BoxGeometry( 4, 3, 2);
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 const cube = new THREE.Mesh( geometry, material );
-//scene.add( cube );
+scene.add( cube );
 
 camera.position.z = 10;
 camera.position.y =0;
