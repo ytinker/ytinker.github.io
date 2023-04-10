@@ -12,11 +12,6 @@ document.body.appendChild( renderer.domElement );
 
 
 // Set the camera position
-renderer.gammaFactor=2.2;
-const geometry = new THREE.BoxGeometry( 10,10, 10);
-const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-const cube = new THREE.Mesh( geometry, material );
-//scene.add( cube );
 
 camera.position.z = 10;
 camera.position.y =0;
@@ -24,7 +19,7 @@ camera.position.y =0;
 
 // Load the GLB file and add it to the scene
 const loader = new GLTFLoader();
-loader.load( 'scene.gltf', function ( gltf ) {
+loader.load( 'model.glb', function ( gltf ) {
 	console.log('GLB file loaded successfully.');
 	scene.add( gltf.scene );
     // Set the model's position and scale
@@ -42,9 +37,6 @@ scene.add( light );
     // Animate the scene
 function animate() {
   requestAnimationFrame(animate);
-
-  cube.rotation.x += 0.002;
-  cube.rotation.y += 0.002;
   renderer.render(scene, camera);
 }
 

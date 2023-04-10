@@ -1,11 +1,11 @@
 Model Information:
-* title:	Miku with You 2021 fanart by chunyou_
-* source:	https://sketchfab.com/3d-models/miku-with-you-2021-fanart-by-chunyou-34ef9b7e5a2344e7a6024d02e2acfd80
-* author:	chunyou_ (https://sketchfab.com/chunyou_)
+* title:	Blender2.82a Hatsune Miku Free version
+* source:	https://sketchfab.com/3d-models/blender282a-hatsune-miku-free-version-b1f501ad8d68464692be8061b54c4f78
+* author:	craudition (https://sketchfab.com/craudition)
 
 Model License:
-* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
-* requirements:	Author must be credited. No commercial use.
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Miku with You 2021 fanart by chunyou_" (https://sketchfab.com/3d-models/miku-with-you-2021-fanart-by-chunyou-34ef9b7e5a2344e7a6024d02e2acfd80) by chunyou_ (https://sketchfab.com/chunyou_) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+This work is based on "Blender2.82a Hatsune Miku Free version" (https://sketchfab.com/3d-models/blender282a-hatsune-miku-free-version-b1f501ad8d68464692be8061b54c4f78) by craudition (https://sketchfab.com/craudition) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
