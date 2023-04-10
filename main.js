@@ -16,10 +16,13 @@ renderer.gammaFactor=2.2;
 const geometry = new THREE.BoxGeometry( 10,10, 10);
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 const cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
+//scene.add( cube );
 
 camera.position.z = 10;
 camera.position.y =0;
+
+const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+scene.add( light );
 
 // Load the GLB file and add it to the scene
 const loader = new GLTFLoader();
