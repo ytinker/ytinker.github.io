@@ -21,8 +21,11 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
 
+      const light = new THREE.AmbientLight( 0xffffff ); // soft white light
+      scene.add( light );
+
       var loader = new THREE.GLTFLoader();
-      loader.load('https://ytinker.github.io/model.glb', function(gltf) {
+      loader.load('model2.glb', function(gltf) {
         scene.add(gltf.scene);
       });
 
