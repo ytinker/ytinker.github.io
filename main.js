@@ -17,7 +17,7 @@ scene.add( light );
 
 // Load the GLB file and add it to the scene
 const loader = new GLTFLoader();
-loader.load( 'scene.gltf', function ( gltf ) {
+loader.load( 'model.glb', function ( gltf ) {
 	console.log('GLB file loaded successfully.');
 	scene.add( gltf.scene );
   camera.position.z = 5;
