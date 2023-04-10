@@ -3,7 +3,7 @@ import * as THREE from 'three';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, screen.width / screen.height, 0.1, 1000 );
-scene.background = new VideoColorSpace('white');
+//scene.background = new VideoColorSpace('white');
 const light = new THREE.AmbientLight( 0x040404 ); // soft white light
 
 const renderer = new THREE.WebGLRenderer();
