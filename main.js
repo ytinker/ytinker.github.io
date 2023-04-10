@@ -10,8 +10,7 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
 // Set the camera position
-camera.position.z = 5;
-camera.position.y =0;
+
 
 const light = new THREE.AmbientLight( 0xffffff ); // soft white light
 scene.add( light );
@@ -21,6 +20,13 @@ const loader = new GLTFLoader();
 loader.load( 'scene.gltf', function ( gltf ) {
 	console.log('GLB file loaded successfully.');
 	scene.add( gltf.scene );
+  camera.position.z = 5;
+  camera.position.y =0;
+  gltf.animations;
+  gltf.scene;
+  gltf.scenes;
+  gltf.cameras;
+  gltf.asset;
     // Set the model's position and scale
 
 }, function ( xhr ) {
