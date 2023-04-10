@@ -39,7 +39,7 @@ function ( error ) {
 	console.error( error );
 } );
 
-const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+const light = new THREE.AmbientLight( 0xffffff ); // soft white light
 scene.add( light );
 
     // Animate the scene
