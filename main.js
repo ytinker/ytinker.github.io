@@ -15,6 +15,7 @@ document.body.appendChild( renderer.domElement );
 const light = new THREE.AmbientLight( 0x040404 ); // soft white light
 scene.add( light );
 
+
 // Load the GLB file and add it to the scene
 const loader = new GLTFLoader();
 loader.load( 'model.glb', function ( gltf ) {
