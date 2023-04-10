@@ -12,7 +12,7 @@ document.body.appendChild( renderer.domElement );
 // Set the camera position
 
 
-const light = new THREE.AmbientLight( 0xffffff ); // soft white light
+const light = new THREE.AmbientLight( 0x040404 ); // soft white light
 scene.add( light );
 
 // Load the GLB file and add it to the scene
@@ -20,7 +20,7 @@ const loader = new GLTFLoader();
 loader.load( 'model.glb', function ( gltf ) {
 	console.log('GLB file loaded successfully.');
 	scene.add( gltf.scene );
-  camera.position.z = 5;
+  camera.position.z = 3;
   camera.position.y =0;
   gltf.animations;
   gltf.scene;
