@@ -19,7 +19,7 @@ camera.position.y =0;
 
 // Load the GLB file and add it to the scene
 const loader = new GLTFLoader();
-loader.load( 'model.glb', function ( gltf ) {
+loader.load( 'scene.gltf', function ( gltf ) {
 	console.log('GLB file loaded successfully.');
 	scene.add( gltf.scene );
     // Set the model's position and scale
