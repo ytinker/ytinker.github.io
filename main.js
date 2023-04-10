@@ -27,13 +27,14 @@ function ( error ) {
 } );
 
 // Set the camera position
-const geometry = new THREE.BoxGeometry( 2, 2, 2);
+renderer.gammaFactor=2.2;
+const geometry = new THREE.BoxGeometry( 4, 3, 2);
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 const cube = new THREE.Mesh( geometry, material );
 //scene.add( cube );
 
-camera.position.z = 5;
-camera.position.y =-2;
+camera.position.z = 10;
+camera.position.y =0;
 
 
 
